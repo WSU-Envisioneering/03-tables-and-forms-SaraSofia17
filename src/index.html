@@ -1,16 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>Assignment Starter</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./stylesheets/main.css">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test CSS</title>
+  <link rel="stylesheet" href="./stylesheets/main.css" />
 
-<body>
-  <!--  Your HTML goes here-->
-  <h1>Welcome to WEB 1400!!!!!</h1>
-<script type="module" src="./javascripts/main.js"></script>
-</body>
+<!--  Your HTML goes here-->
+  <body>
+    <header>
+      <h1>Descubre Destinos Turísticos del Mundo</h1>
+    </header>
+
+    <section>
+      <h2>Mapa Interactivo</h2>
+      <img src="./images/mapamundo.png" alt="Mapa del mundo" usemap="#worldmap" width="600" />
+      <map name="worldmap">
+        <area shape="rect" coords="75,80,120,120" href="https://es.wikipedia.org/wiki/Par%C3%ADs" alt="París" target="_blank" />
+        <area shape="circle" coords="300,130,30" href="https://es.wikipedia.org/wiki/Nueva_York" alt="Nueva York" target="_blank" />
+        <area shape="poly" coords="450,200,460,220,470,210,460,190" href="https://es.wikipedia.org/wiki/Tokio" alt="Tokio" target="_blank" />
+      </map>
+    </section>
+
+    <section class="form-section">
+      <h2>Planea tu viaje</h2>
+      <form>
+        <label for="name">Nombre completo:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required />
+
+     <label>¿Has viajado fuera del país?</label>
+        <div class="radio-group">
+        <div class="radio-option">
+         <input type="radio" id="yes" name="traveled" value="yes" />
+         <label for="yes">Sí</label>
+        </div>
+        <div class="radio-option">
+         <input type="radio" id="no" name="traveled" value="no" />
+    <label for="no">No</label>
+       </div>
+    </div>
+
+        <label for="date">Fecha de tu próximo viaje:</label>
+        <input type="date" id="date" name="date" />
+
+        <label for="destination">Destino favorito:</label>
+        <select id="destination" name="destination">
+          <option value="paris">París</option>
+          <option value="newyork">Nueva York</option>
+          <option value="tokyo">Tokio</option>
+          <option value="sydney">Sídney</option>
+          <option value="bali">Bali</option>
+        </select>
+
+        <label for="message">Comentarios:</label>
+        <textarea id="message" name="message" rows="4" cols="40"></textarea>
+
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Restablecer" />
+      </form>
+    </section>
+
+    <section>
+      <h2>Comparación de destinos</h2>
+      <table id="main-table">
+        <caption>Destinos Populares - Costos y Duración</caption>
+        <colgroup>
+          <col span="1" style="background-color:#f2f2f2;" />
+          <col span="2" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Destino</th>
+            <th>Costo estimado</th>
+            <th>Duración del viaje</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2">París</td>
+            <td>$2,000</td>
+            <td>7 días</td>
+          </tr>
+          <tr>
+            <td colspan="2">Incluye tour guiado</td>
+          </tr>
+          <tr>
+            <td>Nueva York</td>
+            <td>$1,800</td>
+            <td>5 días</td>
+          </tr>
+          <tr>
+            <td>Tokio</td>
+            <td>$2,500</td>
+            <td>10 días</td>
+          </tr>
+          <tr>
+            <td>Bali</td>
+            <td>$1,500</td>
+            <td>6 días</td>
+          </tr>
+          <tr>
+            <td>Sídney</td>
+            <td>$3,000</td>
+            <td>8 días</td>
+          </tr>
+          <tr>
+            <td>Roma</td>
+            <td>$1,700</td>
+            <td>5 días</td>
+          </tr>
+          <tr>
+            <td>Bangkok</td>
+            <td>$1,200</td>
+            <td>7 días</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">* Los precios son aproximados y pueden variar.</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+  </body>
 </html>
